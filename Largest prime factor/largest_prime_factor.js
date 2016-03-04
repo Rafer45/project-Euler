@@ -56,13 +56,3 @@ function decompose(n) {
 
     return componentArr;
 }
-
-console.log(1 .isPrime() == false);
-console.log(4 .isPrime() == false);
-console.log(19 .isPrime());
-
-console.log(getNPrimes(12));
-console.log(getNthPrime(12));
-
-console.log(decompose(number));
-console.log(decompose(1980));
