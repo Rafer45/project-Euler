@@ -3,12 +3,12 @@ var number = 600851475143;
 // Maybe not the most efficient way, but pretty easy to digest.
 // I'll havetoimprove it sometime later.
 
- // Abstracts the 'not modulus result' operation that returns true if it's divisible.
+ // Returns the 'not modulus result' operation that returns true if it's divisible.
 Number.prototype.isDivisibleBy = function(divisor) {
     return !(this % divisor);
 }
 
-
+// Returns whether or not a number is prime. Not efficient.
 Number.prototype.isPrime = function() {
     for (var i = 2; i <= this/2; i++) {
         if (this .isDivisibleBy(i)) {
@@ -18,6 +18,7 @@ Number.prototype.isPrime = function() {
     return i >= 2;
 }
 
+// Returns an array with n prime numbers, ascending from 2.
 function getNPrimes(n) {
     var numList = [],
         i = 2;
@@ -31,10 +32,12 @@ function getNPrimes(n) {
     return numList;
 }
 
+// returns the nth prime number, starting from 2.
 function getNthPrime(n) {
     return getNPrimes(n)[n-1];
 }
 
+// Returns an array with number's prime factors in ascending order.
 function decompose(n) {
     var i = 1,
         myN = n,
